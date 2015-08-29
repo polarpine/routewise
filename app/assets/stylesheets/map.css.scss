@@ -3,6 +3,12 @@
   width: 100%;
   margin-top: 60px;
   position: absolute !important;
+  z-index: 999;
+}
+
+.sk-fading-circle {
+  position: absolute;
+  margin-top: 400px;
 }
 
 .map-copy {
