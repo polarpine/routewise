@@ -1,1 +1,7 @@
 Welcome
+
+<%= form_tag("/destination", method: "get") do %>
+  <%= label_tag(:q, "Destination:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Show me routes!") %>
+<% end %>
