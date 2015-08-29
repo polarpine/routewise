@@ -1,9 +1,15 @@
-div {
-  border: 1px solid green;
-  h1 {
-    color: red;
-  }
-  h2 {
-    color: blue;
-  }
+@import "reset";
+
+.homepage-container{
+  height: 300px;
+}
+.banner-container{
+  background-image: url("background.jpg");
+  background-position: center;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner{
+
 }
