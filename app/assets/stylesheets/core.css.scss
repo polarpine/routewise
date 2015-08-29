@@ -26,4 +26,20 @@ nav {
   &:hover {
     background: linear-gradient(#4ab4e8, #1491d0);
   }
+  &.take-me-home {
+    background: linear-gradient(#3baee7, #0088cc);
+  }
+}
+
+.feature-button {
+  margin-left: 100px;
+  padding: 0 16px;
+  border: 0;
+  background: linear-gradient(#f6e312, #f9c80d);
+  color: #000;
+  border-radius: 4px;
+  line-height: 22px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 13px;
 }
