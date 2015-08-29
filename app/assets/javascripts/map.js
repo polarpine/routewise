@@ -70,5 +70,9 @@ function calculateAndDisplayRoute(directionsService, pos, map) {
     } else {
       window.alert('Directions request failed due to ' + status);
     }
+    var userLatitude = 37.784633, userLongitude = -122.397414, 
+  destinationLatitude = 37.784633, 
+  destinationLongitude = -122.397414;
+  getEstimatesForUserLocation(userLatitude,userLongitude, destinationLatitude, destinationLongitude)
   });
 }
