@@ -7,10 +7,11 @@
   <div class="banner-container">
     <div class="search">
       <%= form_tag("/destination", method: "get") do %>
-        <%= label_tag(:q, "Destination:") %>
-        <%= text_field_tag(:q) %>
+        <%= label_tag(:q, "Where do you want to go?") %>
         <br />
-        <%= submit_tag("Show me routes!") %>
+        <%= text_field_tag(:q, nil, class: "user-input") %>
+        <br />
+        <%= submit_tag("Show me routes!", class: "button") %>
       <% end %>
     </div>
   </div>
