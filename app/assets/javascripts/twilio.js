@@ -7,12 +7,18 @@ function sendSMS(msg, num){
 	}
 	$.ajax({
 	 url: '/twilio/send_sms',
-	 type: 'post',
+	 type: 'get',
 	 data: textObj
 	}).success(function(data){
 	 console.log('Hi vanessa')
 	}).fail(function(){
+    console.log("failed");
 	})
 }
 
-$('.twillio').on('click', sendSMS('Hoot hoot!'));
+$('.twillio').on('click', textFriend);
+
+function textFriend() {
+  sendSMS('Ship it!');
+  $(this).context.innerHTML = '<button class="feature-button" name="button">Text: Arrived!</button>'
+}
