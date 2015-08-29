@@ -11,9 +11,36 @@
 
 .search {
   position: relative;
-  top: 50%;
+  top: 65%;
   left: 50%;
-  margin-left: -155px;
+  margin-left: -168px;
+  form {
+    label {
+      font-size: 28px;
+    }
+    .user-input {
+      margin: 30px 0 30px 50px;
+      border: none;
+      border-radius: 3px;
+      line-height: 30px;
+      width: 220px;
+    }
+    .button {
+      margin-left: 100px;
+      padding: 0 16px;
+      border: 0;
+      background: linear-gradient(#3baee7, #0088cc);
+      color: #FFF;
+      border-radius: 4px;
+      line-height: 22px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 13px;
+      &:hover {
+        background: linear-gradient(#4ab4e8, #1491d0);
+      }
+    }
+  }
 }
 
 .homepage-copy {
@@ -23,6 +50,8 @@
   text-align: center;
   padding-top: 30px;
   p {
-      font-weight: 400px;
+    font-weight: 400px;
   }
 }
+
+
