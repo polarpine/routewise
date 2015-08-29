@@ -6,7 +6,7 @@ var userLatitude = 37.784633, userLongitude = -122.397414,
  
 
  var uberClientId = "QUbBZcCkCWkSQK1ype39BqtDwzaRCAKu",
-  uberServerToken = "ZJVI3W-KWBLwR_zNayrZkt1sVY7hBNYZVuK36kHh";
+  uberServerToken = "RWOZ4PkducD2qSkhF2seerwvU3-OKiYxPbw-F9oH";
 
 
 // navigator.geolocation.watchPosition(function(position) {

@@ -39,4 +39,3 @@ gem 'spring',        group: :developmentil
 # gem 'debugger', group: [:development, :test]
 
 gem 'twilio-ruby'
-gem 'sqlite3'
