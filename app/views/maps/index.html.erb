@@ -1,7 +1,20 @@
-<div id="map"></div>
-<script>
-  var destination = '<%= h @destination -%>'
-</script>
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe-JOacAl1KmUnsvQ4xHrBJQRWrlD7zw0&callback=initMap">
-</script>
+<%= render "partials/nav" %>
+
+<div id="map" class="map">
+  <script>
+    var destination = '<%= h @destination -%>'
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe-JOacAl1KmUnsvQ4xHrBJQRWrlD7zw0&callback=initMap">
+  </script>
+</div>
+
+<div class="map-copy">
+  <p>These are three suggested routes!
+    <br>
+    If none are safe, call an Uber!
+  </p>
+</div>
+
+<div id="uber">
+</div>
