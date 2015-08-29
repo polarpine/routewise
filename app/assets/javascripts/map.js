@@ -1,6 +1,23 @@
-function initMap() {
-  var directionsService = new google.maps.DirectionsService;
+var gradient = [
+    'rgba(0, 255, 255, 0)',
+    'rgba(0, 255, 255, 1)',
+    'rgba(0, 191, 255, 1)',
+    'rgba(0, 127, 255, 1)',
+    'rgba(0, 63, 255, 1)',
+    'rgba(0, 0, 255, 1)',
+    'rgba(0, 0, 223, 1)',
+    'rgba(0, 0, 191, 1)',
+    'rgba(0, 0, 159, 1)',
+    'rgba(0, 0, 127, 1)',
+    'rgba(63, 0, 91, 1)',
+    'rgba(127, 0, 63, 1)',
+    'rgba(191, 0, 31, 1)',
+    'rgba(255, 0, 0, 1)'
+  ];
 
+function initMap() {
+  getDestinationLatLong();
+  var directionsService = new google.maps.DirectionsService();
   if (navigator.geolocation) {
 
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -16,6 +33,7 @@ function initMap() {
 
       map.setCenter(pos);
       calculateAndDisplayRoute(directionsService, pos, map);
+      getCrimesSanFrancisco(map);
     }, function() {
       console.log("Geolocation available but timed out.");
     });
@@ -28,7 +46,8 @@ function initMap() {
 
 function calculateAndDisplayRoute(directionsService, pos, map) {
   directionsService.route({
-    origin: pos,
+    // origin: pos,
+    origin: "devbootcamp",
     destination: destination,
     travelMode: google.maps.TravelMode.WALKING,
     provideRouteAlternatives: true
@@ -43,6 +62,17 @@ function calculateAndDisplayRoute(directionsService, pos, map) {
       }
     } else {
       window.alert('Directions request failed due to ' + status);
+    }
+  });
+}
+
+function getDestinationLatLong() {
+  geocoder = new google.maps.Geocoder();
+    geocoder.geocode( { 'address': destination }, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+        console.log(results[0].geometry.location);
+    } else {
+      alert("Geocode was not successful for the following reason: " + status);
     }
   });
 }
