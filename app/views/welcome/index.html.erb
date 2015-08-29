@@ -1,7 +1,11 @@
-Welcome
-
-<%= form_tag("/destination", method: "get") do %>
-  <%= label_tag(:q, "Destination:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Show me routes!") %>
-<% end %>
+<section class="homepage-container">
+  <div class="banner-container">
+    <div class="search">
+      <%= form_tag("/destination", method: "get") do %>
+        <%= label_tag(:q, "Destination:") %>
+        <%= text_field_tag(:q) %>
+        <%= submit_tag("Show me routes!") %>
+      <% end %>
+    </div>
+  </div>
+</section>
