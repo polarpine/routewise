@@ -1,11 +1,24 @@
+
 <section class="homepage-container">
+  <nav>
+    <h1 class="title">Routewise</h1>
+  </nav>
+
   <div class="banner-container">
     <div class="search">
       <%= form_tag("/destination", method: "get") do %>
         <%= label_tag(:q, "Destination:") %>
         <%= text_field_tag(:q) %>
+        <br />
         <%= submit_tag("Show me routes!") %>
       <% end %>
     </div>
   </div>
+
+
 </section>
+
+<div class="homepage-copy">
+  <p>Find the safest way to get you<br />
+    where you want to go.</p>
+</div>
