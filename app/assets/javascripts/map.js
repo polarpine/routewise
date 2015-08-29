@@ -16,8 +16,8 @@ var gradient = [
   ];
 
 function initMap() {
+  getDestinationLatLong();
   var directionsService = new google.maps.DirectionsService();
-
   if (navigator.geolocation) {
 
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -62,6 +62,17 @@ function calculateAndDisplayRoute(directionsService, pos, map) {
       }
     } else {
       window.alert('Directions request failed due to ' + status);
+    }
+  });
+}
+
+function getDestinationLatLong() {
+  geocoder = new google.maps.Geocoder();
+    geocoder.geocode( { 'address': destination }, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+        console.log(results[0].geometry.location);
+    } else {
+      alert("Geocode was not successful for the following reason: " + status);
     }
   });
 }
