@@ -50,14 +50,14 @@ function initMap() {
 function calculateAndDisplayRoute(directionsService, pos, map) {
   directionsService.route({
     // origin: pos,
-    origin: "devbootcamp",
+    origin: "dolores park san francisco",
     destination: destination,
     travelMode: google.maps.TravelMode.WALKING,
     provideRouteAlternatives: true
   }, function(response, status) {
 
-    console.log("start", response.routes[0].legs[0].end_location);
-    console.log("end", response.routes[0].legs[0].end_location);
+    // console.log("start", response.routes[0].legs[0].end_location);
+    // console.log("end", response.routes[0].legs[0].end_location);
 
     if (status === google.maps.DirectionsStatus.OK) {
       for (var i = 0, len = response.routes.length; i < len; i++) {
@@ -70,9 +70,9 @@ function calculateAndDisplayRoute(directionsService, pos, map) {
     } else {
       window.alert('Directions request failed due to ' + status);
     }
-    var userLatitude = 37.784633, userLongitude = -122.397414, 
-  destinationLatitude = 37.784633, 
-  destinationLongitude = -122.397414;
-  getEstimatesForUserLocation(userLatitude,userLongitude, destinationLatitude, destinationLongitude)
+    var userLatitude = 37.784633, userLongitude = -122.397414,
+    destinationLatitude = 37.759773,
+    destinationLongitude = -122.427063;
+    getEstimatesForUserLocation(userLatitude,userLongitude, destinationLatitude, destinationLongitude)
   });
 }
