@@ -16,7 +16,6 @@ var gradient = [
   ];
 
 function initMap() {
-  getDestinationLatLong();
   var directionsService = new google.maps.DirectionsService();
   if (navigator.geolocation) {
 
@@ -52,6 +51,10 @@ function calculateAndDisplayRoute(directionsService, pos, map) {
     travelMode: google.maps.TravelMode.WALKING,
     provideRouteAlternatives: true
   }, function(response, status) {
+
+    console.log("start", response.routes[0].legs[0].end_location);
+    console.log("end", response.routes[0].legs[0].end_location);
+
     if (status === google.maps.DirectionsStatus.OK) {
       for (var i = 0, len = response.routes.length; i < len; i++) {
         new google.maps.DirectionsRenderer({
@@ -62,17 +65,6 @@ function calculateAndDisplayRoute(directionsService, pos, map) {
       }
     } else {
       window.alert('Directions request failed due to ' + status);
-    }
-  });
-}
-
-function getDestinationLatLong() {
-  geocoder = new google.maps.Geocoder();
-    geocoder.geocode( { 'address': destination }, function(results, status) {
-    if (status == google.maps.GeocoderStatus.OK) {
-        console.log(results[0].geometry.location);
-    } else {
-      alert("Geocode was not successful for the following reason: " + status);
     }
   });
 }
