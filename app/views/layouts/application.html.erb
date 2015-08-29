@@ -3,12 +3,15 @@
 <head>
   <title>Routewise</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <%= yield %>
 
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe-JOacAl1KmUnsvQ4xHrBJQRWrlD7zw0&callback=initMap">
+  </script>
 </body>
 </html>
