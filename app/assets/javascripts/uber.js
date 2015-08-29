@@ -34,6 +34,8 @@ function getEstimatesForUserLocation(latitude,longitude, destinationLatitude, de
    		
    success: function(result) {
       console.log('Uber Estimate: ', result['prices'][0]['estimate']);
+      $("#uber p").html('Uber Estimate: ' + result['prices'][0]['estimate']),
+      $("#uber-call").css('display','block');
 
      }
   });
