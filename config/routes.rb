@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'destination' => 'maps#index'
 
-  post '/twilio/send_sms' => 'twilio#send_sms'
+  get '/twilio/send_sms' => 'twilio#send_sms'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
