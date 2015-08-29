@@ -37,3 +37,9 @@ gem 'spring',        group: :developmentil
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+gem 'pry'
+
+gem 'twilio-ruby'
+

@@ -10,7 +10,7 @@
 }
 
 .search {
-  position: relative;
+  position: absolute;
   top: 65%;
   left: 50%;
   margin-left: -168px;
@@ -52,6 +52,6 @@
   padding-bottom: 30px;
   p {
     font-weight: 400px;
-    line-height: 25px;
+    line-height: 30px;
   }
 }
