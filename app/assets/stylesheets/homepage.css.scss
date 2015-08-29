@@ -1,0 +1,16 @@
+.banner-container {
+  background-image: url("background.jpg");
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+.search {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -155px;
+}

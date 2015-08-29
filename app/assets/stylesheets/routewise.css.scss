@@ -1,15 +1,4 @@
 @import "reset";
-
-.homepage-container{
-  height: 300px;
-}
-.banner-container{
-  background-image: url("background.jpg");
-  background-position: center;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.banner{
-
-}
+@import "core";
+@import "typography";
+@import "homepage";
