@@ -33,13 +33,24 @@
 
 .homepage-copy {
   position: relative;
-  top: 570px;
+  top: 540px;
   font-size: 20px;
   text-align: center;
   padding-top: 30px;
   p {
     font-weight: 400px;
     line-height: 30px;
+  }
+}
+
+.go-home {
+  position: relative;
+  left: 50%;
+  margin-left: -185px;
+  padding: 10px;
+  top: 540px;
+  .button {
+    margin-top: 10px;
   }
 }
 
