@@ -1,10 +1,9 @@
-var userLatitude
-  , userLongitude
-  , destinationLatitude = 37.485215
-  , destinationLongitude = -122.236355;
+var userLatitude, userLongitude, 
+	destinationLatitude = 37.485215, 
+	destinationLongitude = -122.236355;
 
- var uberClientId = "QUbBZcCkCWkSQK1ype39BqtDwzaRCAKu"
-  , uberServerToken = "vxn0fS7wsl0KgEyP3XFPRvTmYrVkYlnNWt3n54jP";
+ var uberClientId = "QUbBZcCkCWkSQK1ype39BqtDwzaRCAKu",
+  uberServerToken = "ZJVI3W-KWBLwR_zNayrZkt1sVY7hBNYZVuK36kHh";
 
 navigator.geolocation.watchPosition(function(position) {
     // Update latitude and longitude
@@ -12,12 +11,12 @@ navigator.geolocation.watchPosition(function(position) {
     userLongitude = position.coords.longitude;
 });
 
-function myConverter(json){
-	console.log(json)
-}
 function getEstimatesForUserLocation(latitude,longitude) {
   $.ajax({
     url: "https://api.uber.com/v1/estimates/price",
+    headers: {
+        Authorization: "Token " + uberServerToken
+    },
     data: { 
       start_latitude: latitude,
       start_longitude: longitude,
@@ -25,12 +24,9 @@ function getEstimatesForUserLocation(latitude,longitude) {
       end_longitude: destinationLongitude,
       server_token: uberServerToken
     },
-	  dataType: 'jsonp',
-	  jsonpCallback: 'myConverter',
-	  jsonp: 'callback',
    		
    success: function(result) {
-    	console.log(result);
+      console.log('Uber Estimate: ', result['prices'][0]['estimate']);
      }
   });
 }
