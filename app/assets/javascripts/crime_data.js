@@ -24,7 +24,7 @@ function displayHeatMap(map, crimes) {
   var heatmap = new google.maps.visualization.HeatmapLayer({
     data: mappedCrimes,
     map: map,
-    radius: 50,
+    radius: 30,
     opacity: 1,
     gradient: gradient
   });
