@@ -32,7 +32,21 @@
     margin: 20px 40px;
     display: none;
   }
+  p {
+    margin-left: 22px;
+  }
 }
+
+.twillio {
+  position: relative;
+  top: 440px;
+  left: 50%;
+  margin-left: -110px;
+  .button {
+    margin: 20px 40px;
+  }
+}
+
 
 
 .sk-fading-circle {
