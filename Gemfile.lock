@@ -123,10 +123,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
-<<<<<<< HEAD
-=======
   pg
->>>>>>> bee2ba8f34d3a34f2e0b3d306028e1016bb0af6e
   pry
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
